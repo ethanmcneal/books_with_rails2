@@ -4,14 +4,18 @@ import Books from './Books'
 import BookForm from './BookForm'
 
 const App = (props) => {
-    const [books, setBooks] = useState([])
+    const [books, setBook] = useState([])
+
+		const addBook = (book) => {
+			setBook([...books,book])
+		}
 
 		const getBooks = async () => {
             console.log("called")
             try{
 			console.log('clicked, TODO: make this work') 
             let response = await axios.get('/books')
-            setBooks(response.data)
+            setBook(response.data)
             } catch(error) {
                 console.log(error)
             }
@@ -20,7 +24,7 @@ const App = (props) => {
     return (
       <div>
         <h1>Book App</h1>
-				<BookForm/>
+				<BookForm addBook={addBook}/>
 				<button onClick={getBooks}>Get Books from DB</button> 
 				<Books books={books} />
 			</div>
