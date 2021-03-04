@@ -8,7 +8,7 @@ const Books = (props) => {
         return books.map( book => <Book {...book}/>)
     }
     return (
-      <div>
+      <div className='booksContainer'>
         <h1>Books</h1>
         {renderBook()}
       </div>

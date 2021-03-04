@@ -1,3 +1,30 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+*{ 
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+    margin: 5px;
+}
+
+.bookContainer {
+    margin: 20px;
+    border: 2px solid black;
+    padding: 20px;
+    
+    
+
+}
+
+.booksContainer {
+   
+   background-color: honeydew;
+   padding: 10px;
+   h1 {
+    background-color: honeydew;
+}
+
+
+
+}

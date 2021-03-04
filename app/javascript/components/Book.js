@@ -6,13 +6,13 @@ const Book = (props) => {
     const renderBook = () => {
         return (
         <div>
-            <h1>Title:{title}</h1>
-            <h2>Author:{author}</h2>
+            <h2>Title:{title}</h2>
+            <h3>Author:{author}</h3>
         </div>)
     }
 
     return (
-        <div>
+        <div className='bookContainer'>
             
             {renderBook()}
         </div>

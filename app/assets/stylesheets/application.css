@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+
+ /* *{ 
+     text-align: center;
+     margin: 5px;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     background-color: aliceblue;
+ }
+
+ .bookContainer {
+     margin: 20px;
+     border: 2px solid black;
+     h1 {
+
+     }
+     
+     
+
+ }
+
+ .booksContainer {
+    
+    background-color: honeydew;
+    padding: 10px
+
+ } */
