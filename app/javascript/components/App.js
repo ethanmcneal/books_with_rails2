@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, {useState} from 'react'
 import Books from './Books'
+import BookForm from './BookForm'
 
 const App = (props) => {
     const [books, setBooks] = useState([])
@@ -17,11 +18,12 @@ const App = (props) => {
         };
 
     return (
-        <div>
-            <h1>Book App</h1>
-			<button onClick={getBooks}>Get Books from DB</button> 
-			<Books books={books} />
-		</div>
+      <div>
+        <h1>Book App</h1>
+				<BookForm/>
+				<button onClick={getBooks}>Get Books from DB</button> 
+				<Books books={books} />
+			</div>
     );
  
 }
