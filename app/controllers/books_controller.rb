@@ -1,7 +1,14 @@
 class BooksController < ApplicationController
 
-    def app
-        render component: 'App'
+    def App
+        render component: "App"
     end
+
+		def index
+			@books = Book
+			
+			render json: @books
+		 
+		end
 
 end
