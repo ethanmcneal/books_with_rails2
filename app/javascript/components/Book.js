@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Book = (props) => {
-    const {title, author, id} = props
+    const {title, author, id, deleteBook} = props
 
     const renderBook = () => {
         return (
@@ -13,7 +13,7 @@ const Book = (props) => {
 
     return (
         <div className='bookContainer'>
-            
+            <button onClick={()=> deleteBook(id)}>delete{id}</button>
             {renderBook()}
         </div>
     )

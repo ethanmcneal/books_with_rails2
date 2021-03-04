@@ -20,6 +20,13 @@ class BooksController < ApplicationController
 		
 		end
 
+        def destroy
+            @book = Book.find(params[:id]).destroy
+
+            render json: @book
+
+        end
+
 end
 
 private

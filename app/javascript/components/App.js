@@ -20,13 +20,24 @@ const App = (props) => {
                 console.log(error)
             }
         };
+        const deleteBook = async(id) => {
+            console.log('delete clicked,', id)
+            try {
+                await axios.delete(`/books/${id}`)
+                let filterBooks = books.filter( book => book.id !== id)
+                setBook(filterBooks)
+            }catch(err){
+                console.log(err)
+            }
+            }
+        
 
     return (
       <div>
         <h1>Book App</h1>
 				<BookForm addBook={addBook}/>
 				<button onClick={getBooks}>Get Books from DB</button> 
-				<Books books={books} />
+				<Books books={books} deleteBook={deleteBook} />
 			</div>
     );
  
