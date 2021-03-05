@@ -32,15 +32,15 @@ const App = (props) => {
             }
             }
 
-						const updateBook = async (bookObj, id) => {
-							try{
-								let response = await axios.put(`/books/${id}`, bookObj)
-								let updateBooks = books.map(book => book.id !== id ? book : response.data)
-								setBooks(updateBooks)
-							}
+			const updateBook = async (bookObj, id) => {
+					try{
+				let response = await axios.put(`/books/${id}`, bookObj)
+				let updateBooks = books.map(book => book.id !== id ? book : response.data)
+				setBook(updateBooks)
+					}
 
-							catch(error){
-                console.log(error)
+			catch(error){
+            console.log(error)
 							}
 						}
         
@@ -50,7 +50,7 @@ const App = (props) => {
         <h1>Book App</h1>
 				<BookForm addBook={addBook}/>
 				<button onClick={getBooks}>Get Books from DB</button> 
-				<Books books={books} deleteBook={deleteBook} />
+				<Books updateBook={updateBook} books={books} deleteBook={deleteBook} />
 			</div>
     );
  

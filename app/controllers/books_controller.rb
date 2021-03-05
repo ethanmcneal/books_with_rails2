@@ -27,6 +27,21 @@ class BooksController < ApplicationController
 
         end
 
+        def update
+            @book = Book.find(params[:id])
+
+            if(@book.update(book_params))
+                render json: @book
+            else 
+                render json: {error: dumb, message: @book.errors.full_messages}
+
+            end
+        
+        end
+
+
+
+
 end
 
 private
