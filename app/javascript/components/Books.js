@@ -2,15 +2,15 @@ import React from 'react';
 import Book from './Book'
 
 const Books = (props) => {
-    const {books, deleteBook} = props
+    const {books, deleteBook, updateBook} = props
 
-    const renderBook = () =>{
-        return books.map( book => <Book deleteBook={deleteBook}{...book}/>)
+    const renderBooks = () =>{
+        return books.map( book => <Book updateBook={updateBook} deleteBook={deleteBook} key={book.id}{...book}/>)
     }
     return (
       <div className='booksContainer'>
         <h1>Books</h1>
-        {renderBook()}
+        {renderBooks()}
       </div>
     );
 

@@ -26,10 +26,23 @@ const App = (props) => {
                 await axios.delete(`/books/${id}`)
                 let filterBooks = books.filter( book => book.id !== id)
                 setBook(filterBooks)
-            }catch(err){
-                console.log(err)
+            }
+						catch(error){
+                console.log(error)
             }
             }
+
+						const updateBook = async (bookObj, id) => {
+							try{
+								let response = await axios.put(`/books/${id}`, bookObj)
+								let updateBooks = books.map(book => book.id !== id ? book : response.data)
+								setBooks(updateBooks)
+							}
+
+							catch(error){
+                console.log(error)
+							}
+						}
         
 
     return (
